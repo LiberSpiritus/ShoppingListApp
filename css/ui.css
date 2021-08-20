@@ -1,0 +1,45 @@
+.vH {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+    clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+    white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+html{overflow:hidden; font-size:1rem;}
+body{border-radius: 10px;}
+input{outline:none; border:none; display:block; width:100%;}
+
+header, footer{
+    background:linear-gradient(to right, #E2B9CE, #8DB6EA);
+}
+
+header{text-align: center; border-radius:}
+header h1{color:#FFF; padding:10px 0px;}
+
+.main .topContent{background: #EFEEF5; height:82vh;}
+.main .topContent ul{font-size:0;}
+.main .topContent ul li {padding:20px 20px;}
+.main .topContent ul li span{display:inline-block; width:50%; font-size:1rem;}
+.main .topContent ul li span:last-child{text-align:right;}
+.main .topContent .fa-trash{cursor:pointer; transition:all 0.1s ease-in;}
+.main .topContent .fa-trash:hover{color:red;}
+.main .bottomContent{background:white;}
+.main .bottomContent input{padding: 10px 10px;}
+
+
+.footer{text-align:center;}
+
+.footer .btnPlus{color:#FFF; background:#000; border-radius: 50%; width:40px; height:40px; line-height:35px; display:inline-block; margin:5px 0px; font-size: 30px; font-weight: bold;
+    transition:all 0.1s ease-in;
+}
+.footer .btnPlus:hover{width:41px; height:41px; line-height:41px;}
+
+
+.footer .btnPlus .vH{font-size:20px;}
