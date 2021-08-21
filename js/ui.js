@@ -1,6 +1,7 @@
 'use strict';
 
 const btnPlus = document.querySelector(".btnPlus");
+const btnAll = document.querySelector(".btnAll");
 const input = document.querySelector(".bottomContent input");
 const topContent = document.querySelector(".topContent");
 
@@ -9,16 +10,20 @@ const topContent = document.querySelector(".topContent");
 btnPlus.addEventListener("click",function(){
     // 1. input val 가져오기
     loopValueAdd(input.value);
-    // 2. html,css 잡아놓았던 li 태그 가져오기
+
+});
+
+btnAll.addEventListener("click",function(){
+
+    loopValueAllRemove();   
 
 });
 
 input.addEventListener("keydown",function(e){
-    // 1. input val 가져오기
+    // e.keyCode가 Enter(13)일때
     if(e.keyCode === 13){
         loopValueAdd(input.value);
     }
-    // 2. html,css 잡아놓았던 li 태그 가져오기
 });
 
 
@@ -38,5 +43,19 @@ function loopValueRemove(){
             e.target.parentElement.parentElement.remove();
         });
 
+    }
+}
+
+// 모두 제거 기능 추가 21.8.22
+function loopValueAllRemove(){
+    const topContentList = document.querySelectorAll(".topContent ul");
+    
+    // 리스트에 내용이 하나라도 있을경우에만 로직 작동.
+    if(topContentList.length > 0){
+        // console.log(topContentList.length);
+        for(var i = 0; i < topContentList.length; i++){
+            // console.log(topContentList[i]);
+            topContentList[i].remove();
+        }
     }
 }
