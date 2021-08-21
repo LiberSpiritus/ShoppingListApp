@@ -52,10 +52,17 @@ function loopValueAllRemove(){
     
     // 리스트에 내용이 하나라도 있을경우에만 로직 작동.
     if(topContentList.length > 0){
-        // console.log(topContentList.length);
-        for(var i = 0; i < topContentList.length; i++){
-            // console.log(topContentList[i]);
-            topContentList[i].remove();
+
+        const confirmValue = confirm('정말 삭제 하시겠습니까?');
+
+        // 정말 모두 삭제 할지의 구문 추가
+        if(confirmValue === true){
+            for(var i = 0; i < topContentList.length; i++){
+                // console.log(topContentList[i]);
+                topContentList[i].remove();
+            }
         }
+
+        
     }
 }
