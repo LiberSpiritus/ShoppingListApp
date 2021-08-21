@@ -12,8 +12,10 @@
     white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 
-html{overflow:hidden; font-size:1rem;}
+html{font-size:1rem;}
 body{border-radius: 10px;}
+/* 가로 스크롤 방지 */
+html, body{max-width:100%; overflow-x:hidden;}
 input{outline:none; border:none; display:block; width:100%;}
 
 .header, .footer{
