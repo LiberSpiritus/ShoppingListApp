@@ -25,7 +25,7 @@ input{outline:none; border:none; display:block; width:100%;}
 .header{text-align: center; border-radius:}
 .header h1{color:#FFF; padding:10px 0px;}
 
-.main .topContent{background: #EFEEF5; height:82vh;}
+.main .topContent{background: #EFEEF5; height:82vh; overflow-y:auto;}
 .main .topContent ul{font-size:0;}
 .main .topContent ul li {padding:20px 20px;}
 .main .topContent ul li span{display:inline-block; width:50%; font-size:1rem;}
