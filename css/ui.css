@@ -31,7 +31,7 @@ input{outline:none; border:none; display:block; width:100%;}
 .main .topContent ul li span{display:inline-block; width:50%; font-size:1rem;}
 .main .topContent ul li span:last-child{text-align:right;}
 .main .topContent .fa-trash{cursor:pointer; transition:all 0.1s ease-in;}
-.main .topContent .fa-trash:hover{color:red;}
+.main .topContent .fa-trash:hover{color:red; transform:scale(1.1);}
 .main .bottomContent{background:white;}
 .main .bottomContent input{padding: 10px 10px;}
 
@@ -45,7 +45,7 @@ input{outline:none; border:none; display:block; width:100%;}
 .footer .btnPlus{color:#FFF; background:#000; border-radius: 50%; width:40px; height:40px; line-height:35px; display:inline-block; margin:5px 0px; font-size: 30px; font-weight: bold;
     transition:all 0.1s ease-in;
 }
-.footer .btnPlus:hover{width:41px; height:41px; line-height:41px;}
+.footer .btnPlus:hover{transform:scale(1.1);}
 .footer .btnAll{    background: blue;
     color: #fff;
     padding: 10px;
