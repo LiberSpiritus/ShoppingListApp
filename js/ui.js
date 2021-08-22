@@ -6,19 +6,21 @@ const input = document.querySelector(".bottomContent input");
 const topContent = document.querySelector(".topContent");
 
 
-
+// 플러스 버튼 클릭시 리스트 추가
 btnPlus.addEventListener("click",function(){
     // 1. input val 가져오기
     loopValueAdd(input.value);
 
 });
 
+// 모두 삭제 버튼 클릭시 리스트 모두 삭제
 btnAll.addEventListener("click",function(){
 
     loopValueAllRemove();   
 
 });
 
+// Enter 입력시 리스트 추가
 input.addEventListener("keydown",function(e){
     // e.keyCode가 Enter(13)일때
     if(e.keyCode === 13){
@@ -29,10 +31,13 @@ input.addEventListener("keydown",function(e){
 
 
 function loopValueAdd(inputVal){
-    topContent.innerHTML += `<ul><li><span>${inputVal}</span><span><i class=\"fas fa-trash\"></i></span></li></ul>`;
-    input.value = "";
+    // 입력 값이 없을시 리스트 추가 안되게 추가 8.23
+    if(inputVal.length > 0){
+        topContent.innerHTML += `<ul><li><span>${inputVal}</span><span><i class=\"fas fa-trash\"></i></span></li></ul>`;
+        input.value = "";
 
-    loopValueRemove();
+        loopValueRemove();
+    }
         
 }
 
