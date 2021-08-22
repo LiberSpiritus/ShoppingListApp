@@ -9,7 +9,9 @@ const topContent = document.querySelector(".topContent");
 // 플러스 버튼 클릭시 리스트 추가
 btnPlus.addEventListener("click",function(){
     input.focus(); // 버튼클릭시 무조건 입력한 곳에 focus가 오게하기 21.8.23
-    loopValueAdd(input.value);
+    const item = loopValueAdd(input.value);
+    console.log(item);
+    // item.scrollIntoView({block:'center'});
 
 });
 
@@ -35,6 +37,13 @@ function loopValueAdd(inputVal){
     if(inputVal.length > 0){
         // 기존에 리스트 마크업 해놓았던것을 중첩으로 삽입 할수 있게끔 innerHTML과 +=(중첩 연산자) 사용.
         topContent.innerHTML += `<ul><li><span>${inputVal}</span><span><i class=\"fas fa-trash\"></i></span></li></ul>`;
+
+        // 내용 범위가 넘칠경우 새로 추가된 리스트 기준으로 스크롤 되게 추가 21.8.23
+        const topContentUl = document.querySelector(".topContent ul:last-child");
+        // console.log(topContentUl);
+        topContentUl.scrollIntoView({behavior:'smooth'});
+
+
         // 입력한값 초기화
         input.value = "";
         // 동적으로 처리 하기위해 리스트가 추가될때 휴지통 dom 호출후 클릭할수 있게 구현.

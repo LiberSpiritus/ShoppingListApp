@@ -11,7 +11,8 @@ https://liberspiritus.github.io/ShoppingListApp/shoppingList.html
 
 추가 기능
 
-1. 리스트 모두 삭제 (메시지 구분 추가.)
+1. 리스트 모두 삭제 (메시지 구분 추가.) 210822
+2. 리스트 영역 넘칠 경우 자동 스크롤 (가장 최근에 추가한 리스트 기준.) 210823
 
 HTML, CSS한일
 
