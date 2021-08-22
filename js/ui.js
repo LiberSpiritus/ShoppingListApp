@@ -9,10 +9,7 @@ const topContent = document.querySelector(".topContent");
 // 플러스 버튼 클릭시 리스트 추가
 btnPlus.addEventListener("click",function(){
     input.focus(); // 버튼클릭시 무조건 입력한 곳에 focus가 오게하기 21.8.23
-    const item = loopValueAdd(input.value);
-    console.log(item);
-    // item.scrollIntoView({block:'center'});
-
+    loopValueAdd(input.value);
 });
 
 // 모두 삭제 버튼 클릭시 리스트 모두 삭제
