@@ -8,7 +8,7 @@ const topContent = document.querySelector(".topContent");
 
 // 플러스 버튼 클릭시 리스트 추가
 btnPlus.addEventListener("click",function(){
-    // 1. input val 가져오기
+    input.focus(); // 버튼클릭시 무조건 입력한 곳에 focus가 오게하기 21.8.23
     loopValueAdd(input.value);
 
 });
@@ -31,7 +31,7 @@ input.addEventListener("keydown",function(e){
 
 
 function loopValueAdd(inputVal){
-    // 입력 값이 없을시 리스트 추가 안되게 추가 8.23
+    // 입력 값이 없을시 리스트 추가 안되게 추가 21.8.23
     if(inputVal.length > 0){
         topContent.innerHTML += `<ul><li><span>${inputVal}</span><span><i class=\"fas fa-trash\"></i></span></li></ul>`;
         input.value = "";

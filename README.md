@@ -4,7 +4,9 @@ https://liberspiritus.github.io/ShoppingListApp/shoppingList.html
 
 기능
 
-1. input(입력)에 있는 값을 토대로 리스트 추가 (입력 값 없을시 작동 안하게 수정.)
+1. input(입력)에 있는 값을 토대로 리스트 추가
+   (input에 포커싱을 둔후 +버튼 클릭 및 input에 포커싱을 둔후 키보드 Enter키 입력 둘다 작동.)
+   (입력 값 없을시 작동 안되게 수정, 사용자 접근성을 위해, input 포커싱 가게 추가)
 2. 리스트안에 있는 휴지통 모양 클릭시 리스트 삭제
 
 추가 기능
