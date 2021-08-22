@@ -33,9 +33,11 @@ input.addEventListener("keydown",function(e){
 function loopValueAdd(inputVal){
     // 입력 값이 없을시 리스트 추가 안되게 추가 21.8.23
     if(inputVal.length > 0){
+        // 기존에 리스트 마크업 해놓았던것을 중첩으로 삽입 할수 있게끔 innerHTML과 +=(중첩 연산자) 사용.
         topContent.innerHTML += `<ul><li><span>${inputVal}</span><span><i class=\"fas fa-trash\"></i></span></li></ul>`;
+        // 입력한값 초기화
         input.value = "";
-
+        // 동적으로 처리 하기위해 리스트가 추가될때 휴지통 dom 호출후 클릭할수 있게 구현.
         loopValueRemove();
     }
         
